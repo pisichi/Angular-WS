@@ -1,0 +1,9 @@
+
+
+<div class="col-12 p-2 bg-info text-center text-white">
+    <h1>search-page</h1>
+</div>
+
+<app-search-form (addToList)="addData($event)"></app-search-form>
+
+<app-result-list [data]="dataList"></app-result-list>

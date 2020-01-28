@@ -1,0 +1,118 @@
+<div class="col-12 a p-5 mx-auto bg-dark  text-white">
+    <h1>test</h1>
+
+    <!-- 
+    <div class="my-4">
+        <p-panel header="Title" [toggleable]="true">
+            Content
+        </p-panel>
+    </div>
+
+    <h3 class="first">DropDown Component</h3>
+    <div class="my-2">
+    <p-dropdown [options]="cities" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
+    </div> -->
+
+    <p-panel header="search panel">
+
+
+        <div class="row mt-1">
+            <div class="col-3 text-left">
+                <label for="department" class="mx-2">Department</label>
+            </div>
+
+            <p-dropdown id="department" [options]="departmentList" optionLabel="departmentName"
+                placeholder="Select a Department" [(ngModel)]="departmentSelected" [showClear]="true">
+            </p-dropdown>
+        </div>
+
+
+        <div class="row mt-2 align-items-center" *ngIf="departmentSelected">
+            <div class="col-3 text-left">
+                <label for="department" class="mx-2">Department Code</label>
+            </div>
+
+            <input type="text" pInputText [value]="departmentSelected?.departmentCode" [disabled]="true" /> 
+            <!-- ?=nullsafety -->
+
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-3 text-left">
+                <label for="gender" class="mx-2">Gender</label>
+
+
+
+            </div>
+            <ng-container *ngFor="let item of genderList">
+            <p-radioButton name="gender" 
+            class="mx-1" 
+            [value]="item.value"
+            [label]="item.label"
+            [(ngModel)]="genderSelected">
+
+        </p-radioButton>
+
+    </ng-container>
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-3 text-left">
+                <label for="Fname" class="mx-2" >Firstname</label>
+            </div>
+            <input type="text" pInputText [(ngModel)]="firstName" />
+        </div>
+
+        <div class="row mt-2 mb-4">
+            <div class="col-3 text-left">
+                <label for="Lname" class="mx-2" >Lastname</label>
+            </div>
+            <input type="text" pInputText  [(ngModel)]="lastName"/>
+        </div>
+
+        <div class="row mt-2 mb-4">
+
+            <div class="col-3 text-left">
+
+            </div>
+        <div class="col-9 text-right">
+        <p-button label="Add" (click)="addClick($event)" class="mx-1 " styleClass="ui-button-success"></p-button>
+
+        <p-button label="Search" (click)="searchClick($event)" class="mx-1 " styleClass="ui-button-info"></p-button>
+        </div>
+
+        </div>
+
+
+    </p-panel>
+
+    <h4 class="py-2 px-5 text-center text-uppercase">
+        Search result
+    </h4>
+
+<div class="px-3 text-center">
+
+    <ul>
+        <li *ngFor="let item of test">
+<h6> {{item|json}}
+    <br> 
+</h6>
+</li>
+</ul>
+
+</div>
+
+
+
+
+    <!-- <h3 class="first">Button Test</h3>
+    <p-button label="Click" class="mx-2"></p-button>
+    <p-button icon="pi pi-check" label="Click" class="mx-2"></p-button>
+    <p-button icon="pi pi-check" iconPos="right" label="Click" class="mx-2"></p-button>
+    <p-button icon="pi pi-check" class="mx-2"></p-button>
+    <p-button icon="pi pi-check" [disabled]="true" label="Disabled" class="mx-2"></p-button> -->
+
+
+</div>

@@ -28,7 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "src/styles.sass",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           },
@@ -93,6 +99,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.sass"
             ],
             "scripts": []
@@ -124,6 +132,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "firstAngular"
 }
