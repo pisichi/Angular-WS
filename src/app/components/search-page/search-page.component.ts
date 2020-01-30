@@ -12,12 +12,17 @@ export class SearchPageComponent implements OnInit {
   selectedValues;
 
   dataList=[];
+  searchList=[];
   
   ngOnInit() {
   }
 
   addData(event){
     this.dataList.push(event);
+  }
+
+  addSearch(event){
+    this.searchList = event;
   }
 
 }

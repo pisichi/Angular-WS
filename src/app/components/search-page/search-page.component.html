@@ -4,6 +4,8 @@
     <h1>search-page</h1>
 </div>
 
-<app-search-form (addToList)="addData($event)"></app-search-form>
+<app-search-form (addToList)="addData($event)"
+                 (searchResult)="addSearch($event)"></app-search-form>
 
-<app-result-list [data]="dataList"></app-result-list>
+<app-result-list [data]="dataList"
+                 [searchData]="searchList"></app-result-list>

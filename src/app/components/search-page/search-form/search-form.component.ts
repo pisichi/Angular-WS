@@ -46,13 +46,12 @@ genderList = [
   genderSelected;
   firstName;
   lastName;
-  test=[];
+  search;
 
   constructor(private empService: EmployeeService) { }
 
-  @Output()
-  addToList = new EventEmitter();
-  searchResult = new EventEmitter();
+  @Output() addToList = new EventEmitter();
+  @Output() searchResult = new EventEmitter();
 
   ngOnInit() {
     this.empService.hello();
@@ -80,19 +79,14 @@ genderList = [
   searchClick(event){
     this.empService.getEmployee(null).subscribe(response=>{
 
-      this.test = response;
+      this.search = response;
       
-      console.log('response from api',this.test);
-
-      
-
+      console.log('response from api',this.search);
+      this.searchResult.emit(this.search);
     });
 
-    this.searchResult.emit({
+    
 
-      
-
-    });
   }
 
 }

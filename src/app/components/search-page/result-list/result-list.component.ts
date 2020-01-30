@@ -9,10 +9,10 @@ export class ResultListComponent implements OnInit {
 
   constructor() { }
 
-  @Input()
-  data=[];
+  @Input() data=[];
 
-
+  @Input() searchData;
+  
   ngOnInit() {
   }
 

@@ -10,6 +10,7 @@ import {RadioButtonModule} from 'primeng/radiobutton';
 import {InputTextModule} from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { ResultListComponent } from './result-list/result-list.component';
+import {TableModule} from 'primeng/table';
 
 
 
@@ -24,7 +25,8 @@ import { ResultListComponent } from './result-list/result-list.component';
     DropdownModule,
     RadioButtonModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    TableModule,
   ],
   exports:[SearchPageComponent]
 })
