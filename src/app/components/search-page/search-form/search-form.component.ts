@@ -65,7 +65,7 @@ export class SearchFormComponent implements OnInit {
     //   this.search = response;
     //   this.searchResult.emit(this.search);
     // });
-    
+    this.empService.selectedEmployee = null;
     this.getData();
   }
 

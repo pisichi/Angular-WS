@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeService } from 'src/app/services/employee.service';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-result-list',
@@ -23,8 +24,12 @@ export class ResultListComponent implements OnInit {
     this.router.navigateByUrl('/edit');
   }
 
-  gotoDelete(row){
-    this.empService.selectedEmployee = row;
-    
+  
+  delete(row) {
+    this.empService.deleteEmployeeById(row.employeeId).pipe(
+      switchMap(_ => this.empService.getEmployee(null))
+    ).subscribe();
   }
+
+
 }
