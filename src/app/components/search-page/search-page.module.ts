@@ -11,13 +11,14 @@ import {InputTextModule} from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { ResultListComponent } from './result-list/result-list.component';
 import {TableModule} from 'primeng/table';
+import { GenderPipe } from 'src/app/pipes/gender.pipe';
 
 
 
 
 
 @NgModule({
-  declarations: [SearchPageComponent, SearchFormComponent, ResultListComponent],
+  declarations: [SearchPageComponent, SearchFormComponent, ResultListComponent,GenderPipe],
   imports: [
     CommonModule,
     PanelModule,
@@ -27,6 +28,7 @@ import {TableModule} from 'primeng/table';
     InputTextModule,
     FormsModule,
     TableModule,
+    
   ],
   exports:[SearchPageComponent]
 })

@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
   selector: 'app-result-list',
@@ -7,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ResultListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private empService:EmployeeService,private router:Router) { }
 
   @Input() data=[];
 
@@ -15,5 +17,14 @@ export class ResultListComponent implements OnInit {
   
   ngOnInit() {
   }
+  
+  gotoEdit(row){
+    this.empService.selectedEmployee = row;
+    this.router.navigateByUrl('/edit');
+  }
 
+  gotoDelete(row){
+    this.empService.selectedEmployee = row;
+    
+  }
 }

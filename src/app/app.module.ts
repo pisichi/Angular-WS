@@ -19,16 +19,19 @@ import {DropdownModule} from 'primeng/dropdown';
 
 //custom module
 import { SearchPageModule } from './components/search-page/search-page.module';
+import { AddEditPageModule }  from './components/add-edit-page/add-edit-page.module';
 
 
 import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
 
 
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     InputTextModule,
     DropdownModule,
     SearchPageModule,
-    HttpClientModule
+    HttpClientModule,
+    AddEditPageModule
     
   ],
   providers: [],

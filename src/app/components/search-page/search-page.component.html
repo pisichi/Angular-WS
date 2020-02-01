@@ -1,11 +1,16 @@
-
-
 <div class="col-12 p-2 bg-info text-center text-white">
     <h1>search-page</h1>
 </div>
+
+<div class="bg-dark p-5">
+
+
+
 
 <app-search-form (addToList)="addData($event)"
                  (searchResult)="addSearch($event)"></app-search-form>
 
 <app-result-list [data]="dataList"
                  [searchData]="searchList"></app-result-list>
+
+</div>

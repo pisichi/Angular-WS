@@ -1,0 +1,110 @@
+<div class="row text-white text-center justify-content-center">
+
+    <div class="col-5">
+        <p class="text-white-50">also add-edit-form works too!</p>
+
+
+
+
+        <p-panel header="search panel">
+
+            <form [formGroup]="myForm" (ngSubmit)="submit(myForm.getRawValue())">
+
+                <div class="row mt-1">
+                    <div class="col-4 text-left">
+                        <label for="department" class="mx-2">Department</label>
+                    </div>
+
+                    <p-dropdown id="department" [options]="departmentList" optionLabel="departmentName"
+                        placeholder="Select a Department" dataKey="departmentCode" formControlName="department"
+                        [showClear]="true">
+                    </p-dropdown>
+                </div>
+
+
+                <div class="row mt-2 align-items-center" *ngIf="departmentSelected">
+                    <div class="col-4 text-left">
+                        <label for="department" class="mx-2">Department Code</label>
+                    </div>
+                    <input type="text" pInputText [value]="departmentSelected?.departmentCode" [disabled]="true" />
+                </div>
+
+
+                <div class="row mt-2">
+                    <div class="col-4 text-left">
+                        <label for="gender" class="mx-2">Gender</label>
+
+                    </div>
+                    <ng-container *ngFor="let item of genderList">
+                        <p-radioButton name="gender" class="mx-1" [value]="item.value" [label]="item.label"
+                            formControlName="gender">
+                        </p-radioButton>
+                    </ng-container>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-4 text-left">
+
+                        <label for="Fname" class="mx-2">Firstname</label>
+                    </div>
+                    <div>
+                        <input type="text" pInputText formControlName="firstName" />
+                        <div class="text-danger"
+                            *ngIf="myForm.get('firstName').touched && myForm.get('firstName').hasError('required')">
+                            Oops, firstName is required
+                        </div>
+                    </div>
+
+                    <!-- {{myForm.get('firstName').errors|json}} -->
+                </div>
+
+
+
+
+
+
+
+                <div class="row mt-2">
+                    <div class="col-4 text-left">
+                        <label for="Lname" class="mx-2">Lastname</label>
+                    </div>
+                    <div>
+
+                        <input type="text" pInputText formControlName="lastName" />
+                        <div class="text-danger"
+                            *ngIf="myForm.get('lastName').touched && myForm.get('lastName').hasError('required')">
+                            Oops, lastName is required
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+                <div class="row mt-3 mb-4">
+                    <div class="col-7 text-left">
+
+
+                    </div>
+                    <div class=" text-right">
+                        <p-button label="Submit" (click)="submit($event)" class="mx-1 " styleClass="ui-button-success" type="submit">
+                        </p-button>
+
+                        <p-button type="button" label="Back" class="mx-1" styleClass="ui-button-info"
+                            [routerLink]="['/search']"> </p-button>
+
+                    </div>
+                </div>
+
+            </form>
+
+        </p-panel>
+    </div>
+
+</div>
+
+<h5 class="mt-2">{{myForm.value | json}}</h5>

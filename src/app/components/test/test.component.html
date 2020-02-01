@@ -1,70 +1,85 @@
 
+<div class="row">
+    <div class="col-4 bg-danger p-5">
 
-<p>test works!</p>
-max = 10
-<input pInputText type="text" [disabled]="false"  [value]="test">
+    </div>
 
-<button pButton type="button" label="+" (click)="add()"></button>
-<button pButton type="button" label="-" (click)="remove()"></button>
+    <div class="col-8 bg-white p-5">
 
+        <p>test works!</p>
+        max = 10
+        <input pInputText type="text" [disabled]="false"  [value]="test">
+        
+        <button pButton type="button" label="+" (click)="add()"></button>
+        <button pButton type="button" label="-" (click)="remove()"></button>
+        
+        
+        
+        <div class="p-grid">
+            <div class="p-col-4">4</div>
+            <div class="p-col">1 </div>
+            <div class="p-col">1 </div>
+            <div class="p-col">1 </div>
+            <div class="p-col">1 </div>
+            <div class="p-col">1 </div>
+            <div class="p-col">1 </div>
+            <div class="p-col">1 </div>
+            <div class="p-col">1 </div>
+        </div>
+        
+        <div class="p-grid">
+            <div class="p-col-2">2</div>
+            <div class="p-col-6">6</div>
+            <div class="p-col-4">4</div>
+        </div>
+        
+        
+        <h3 class="first">Button Component</h3>
+        <p-button label="Click"></p-button>
+        <p-button icon="pi pi-check" label="Click"></p-button>
+        <p-button icon="pi pi-check" iconPos="right" label="Click"></p-button>
+        <p-button icon="pi pi-check"></p-button>
+        <p-button icon="pi pi-check" [disabled]="true" label="Disabled"></p-button>
+        
+        <h3>Button Directive</h3>
+        <button pButton type="button"label="Click"></button>
+        <button pButton type="button" icon="pi pi-check" label="Click"></button>
+        <button pButton type="button" icon="pi pi-check" iconPos="right" label="Click"></button>
+        <button pButton type="button" icon="pi pi-check"></button>
+        <button pButton type="button" icon="pi pi-check" [disabled]="true" label="Disabled"></button>
+        
+        <h3>Severity Buttons</h3>
+        <button pButton type="button" label="Primary"></button>
+        <button pButton type="button" label="Secondary" class="ui-button-secondary"></button>
+        <button pButton type="button" label="Success" class="ui-button-success"></button>
+        <button pButton type="button" label="Info" class="ui-button-info"></button>
+        <button pButton type="button" label="Warning" class="ui-button-warning"></button>
+        <button pButton type="button" label="Danger" class="ui-button-danger"></button>
+        
+        <h3>Raised Buttons</h3>
+        <button pButton type="button" label="Primary" class="ui-button-raised"></button>
+        <button pButton type="button" label="Secondary" class="ui-button-raised ui-button-secondary"></button>
+        <button pButton type="button" label="Success" class="ui-button-raised ui-button-success"></button>
+        <button pButton type="button" label="Info" class="ui-button-raised ui-button-info"></button>
+        <button pButton type="button" label="Warning" class="ui-button-raised ui-button-warning"></button>
+        <button pButton type="button" label="Danger" class="ui-button-raised ui-button-danger"></button>
+        
+        <h3>Rounded Buttons</h3>
+        <button pButton type="button" label="Primary" class="ui-button-rounded"></button>
+        <button pButton type="button" label="Secondary" class="ui-button-rounded ui-button-secondary"></button>
+        <button pButton type="button" label="Success" class="ui-button-rounded ui-button-success"></button>
+        <button pButton type="button" label="Info" class="ui-button-rounded ui-button-info"></button>
+        <button pButton type="button" label="Warning" class="ui-button-rounded ui-button-warning"></button>
+        <button pButton type="button" label="Danger" class="ui-button-rounded ui-button-danger"></button>
+        
 
+    </div>
 
-<div class="p-grid">
-    <div class="p-col-4">4</div>
-    <div class="p-col">1 </div>
-    <div class="p-col">1 </div>
-    <div class="p-col">1 </div>
-    <div class="p-col">1 </div>
-    <div class="p-col">1 </div>
-    <div class="p-col">1 </div>
-    <div class="p-col">1 </div>
-    <div class="p-col">1 </div>
 </div>
 
-<div class="p-grid">
-    <div class="p-col-2">2</div>
-    <div class="p-col-6">6</div>
-    <div class="p-col-4">4</div>
-</div>
 
 
-<h3 class="first">Button Component</h3>
-<p-button label="Click"></p-button>
-<p-button icon="pi pi-check" label="Click"></p-button>
-<p-button icon="pi pi-check" iconPos="right" label="Click"></p-button>
-<p-button icon="pi pi-check"></p-button>
-<p-button icon="pi pi-check" [disabled]="true" label="Disabled"></p-button>
 
-<h3>Button Directive</h3>
-<button pButton type="button"label="Click"></button>
-<button pButton type="button" icon="pi pi-check" label="Click"></button>
-<button pButton type="button" icon="pi pi-check" iconPos="right" label="Click"></button>
-<button pButton type="button" icon="pi pi-check"></button>
-<button pButton type="button" icon="pi pi-check" [disabled]="true" label="Disabled"></button>
-
-<h3>Severity Buttons</h3>
-<button pButton type="button" label="Primary"></button>
-<button pButton type="button" label="Secondary" class="ui-button-secondary"></button>
-<button pButton type="button" label="Success" class="ui-button-success"></button>
-<button pButton type="button" label="Info" class="ui-button-info"></button>
-<button pButton type="button" label="Warning" class="ui-button-warning"></button>
-<button pButton type="button" label="Danger" class="ui-button-danger"></button>
-
-<h3>Raised Buttons</h3>
-<button pButton type="button" label="Primary" class="ui-button-raised"></button>
-<button pButton type="button" label="Secondary" class="ui-button-raised ui-button-secondary"></button>
-<button pButton type="button" label="Success" class="ui-button-raised ui-button-success"></button>
-<button pButton type="button" label="Info" class="ui-button-raised ui-button-info"></button>
-<button pButton type="button" label="Warning" class="ui-button-raised ui-button-warning"></button>
-<button pButton type="button" label="Danger" class="ui-button-raised ui-button-danger"></button>
-
-<h3>Rounded Buttons</h3>
-<button pButton type="button" label="Primary" class="ui-button-rounded"></button>
-<button pButton type="button" label="Secondary" class="ui-button-rounded ui-button-secondary"></button>
-<button pButton type="button" label="Success" class="ui-button-rounded ui-button-success"></button>
-<button pButton type="button" label="Info" class="ui-button-rounded ui-button-info"></button>
-<button pButton type="button" label="Warning" class="ui-button-rounded ui-button-warning"></button>
-<button pButton type="button" label="Danger" class="ui-button-rounded ui-button-danger"></button>
 
 
 
